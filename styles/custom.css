@@ -1,0 +1,33 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1200px ;
+}
+
+header{
+    height: 100vh;
+}
+
+.custom-purple{
+    color: rgb(203, 3, 203);
+}
+
+.custom-green{
+    background-color: rgb(80, 255, 80)
+}
+
+.custom-red{
+    background-color: rgb(241, 92, 62);
+}
+
+.custom-light-purple{
+    background-color: rgb(199, 159, 255);
+}
+
+.custom-deposit-field{
+    background-color: rgb(214, 255, 203) ;
+}
+
+.custom-withdraw-field{
+    background-color: rgb(254, 221, 210);
+}
