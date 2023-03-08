@@ -1,12 +1,17 @@
-document.getElementById("deposit-btn").addEventListener("click", function(){
+document.getElementById("deposit-btn").addEventListener("click", function () {
     const depositData = document.getElementById("input-deposit-amount");
     const updatingDepositData = parseFloat(depositData.value);
 
+    if (typeof updatingDepositData !== "number" || isNaN(updatingDepositData)) {
+        alert("Please input a valid number!!");
+        return;
+    }
+
     depositData.value = "";
-    
+
     const totalDeposit = document.getElementById("total-deposit");
     const updatingTotalDeposit = parseFloat(totalDeposit.innerText);
-    
+
     const newDepositData = updatingTotalDeposit + updatingDepositData;
     totalDeposit.innerText = newDepositData;
 
@@ -15,19 +20,24 @@ document.getElementById("deposit-btn").addEventListener("click", function(){
 
     const totalBalance = currentBalance + updatingDepositData;
     balance.innerText = totalBalance;
-    
+
 })
 
-document.getElementById("withdraw-btn").addEventListener("click", function(){
+document.getElementById("withdraw-btn").addEventListener("click", function () {
     const withdrawAmount = document.getElementById("input-withdraw-amount");
     const updatedWithdrawAmount = parseFloat(withdrawAmount.value);
+
+    if (typeof updatedWithdrawAmount !== "number" || isNaN(updatedWithdrawAmount)) {
+        alert("Please input a valid number!!");
+        return;
+    }
 
     withdrawAmount.value = "";
 
     const withdraw = document.getElementById("withdraw-money");
     const updatedWithdraw = parseFloat(withdraw.innerText);
 
-    const totalWithdraw = updatedWithdrawAmount + updatedWithdraw ;
+    const totalWithdraw = updatedWithdrawAmount + updatedWithdraw;
 
     withdraw.innerText = totalWithdraw;
 
